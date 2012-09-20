@@ -2,7 +2,7 @@
 '''
 Created on Sep 3, 2012
 
-@author: drlund
+@author: ealkl
 '''
 
 
