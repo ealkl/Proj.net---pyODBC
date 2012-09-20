@@ -6,7 +6,8 @@ A small code example, for connecting to a database through the ODBC driver with 
 1. Basicly what you want to do, is download the ODBC Driver (from MySQL) & the source of pyODBC
 2. Compile the pyODBC connecter (enabling Python to communicate with the ODBC driver).
 3. Install the ODBC driver (according to your host OS). This enables you to talk with a SQL server directly.
-4. Test code within the script: "pyODBC.py". The rest is example code.
+4. Test code within the script: "pyODBC.py". The rest is example code, and not nesseraly required to function proberly.
+5. A good idea, if you already have an SQL db & Python inplace, running a POSIX compliant OS - Simply call >> python /path/to/pyODBC.py <<
 
 Assumptions:
 * Installed and working SQL database, with a functional connection. 
@@ -34,7 +35,7 @@ This means, that the driver is not where is should be (file reference is incorre
 
 * pyodbc.Error: ('00000', '[00000] [iODBC][Driver Manager]dlopen(/usr/local/lib/libmyodbc5.so, 6): no suitable image found.  Did find:\n\t/usr/local/lib/libmyodbc5.so: mach-o, but wrong architecture (0) (SQLDriverConnect)')   
    
-The driver is not the correct arhictecture. I.e. your application is 32bit, but you installed the 64bit driver, for you 64bit OS. This wont work on, i.e. Windows. Here you need a 32bit driver, for a 32bit application.
+The driver is not the correct arhictecture. I.e. your application is 32bit, but you installed the 64bit driver, for you 64bit OS. This wont work on, i.e. Windows. Here you need a 32bit driver, for a 32bit application. Despite running Windows x86_64.
 
 Mac OS notes
 ============   
