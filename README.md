@@ -19,12 +19,17 @@ General notes
 If you are experincing these issues with the ODBC driver, i.e.:   
    
 * pyodbc.Error: ('00000', '[00000] [iODBC][Driver Manager]dlopen({MySQL ODBC 5.1 Driver}, 6): image not found (0) (SQLDriverConnect)')   
+   
 This means, that the driver is not where is should be (file reference is incorrect, or non-existent).
 
 * pyodbc.Error: ('00000', '[00000] [iODBC][Driver Manager]dlopen(/usr/local/lib/libmyodbc5.so, 6): no suitable image found.  Did find:\n\t/usr/local/lib/libmyodbc5.so: mach-o, but wrong architecture (0) (SQLDriverConnect)')   
+   
 The driver is not the correct arhictecture. I.e. your application is 32bit, but you installed the 64bit driver, for you 64bit OS. This wont work on, i.e. Windows. Here you need a 32bit driver, for a 32bit application.
 
 Mac OS notes
 ============   
 
-* "lipo -i" will help you determine which architecture the plugin is made for. On my Mac OS 10.6.8.
+* "lipo -i" will help you determine which architecture the plugin is made for.   
+On Mac OS 10.6.8, with forced 64bit kernel - It was required of me to use the x86_64 driver architecture, extracted from the contents within the .DMG package installer (took me a few hours to get working).
+
+* "iodbctest" is also a nice tool, to test ODBC DSN connections listed within /Library/ODBC/odbc.ini & /Library/ODBC/odbcinst.ini
