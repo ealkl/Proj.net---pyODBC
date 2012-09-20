@@ -5,24 +5,6 @@ Created on Sep 3, 2012
 @author: ealkl
 '''
 
-
-import pyodbc
-cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER=SQLSRV01;DATABASE=DATABASE;UID=USER;PWD=PASSWORD')
-cursor = cnxn.cursor()
-
-cursor.execute("SELECT WORK_ORDER.TYPE,WORK_ORDER.STATUS, WORK_ORDER.BASE_ID, WORK_ORDER.LOT_ID FROM WORK_ORDER")
-for row in cursor.fetchall():
-    print row
-
-
-
-
-
-
-
-
-
---------------
 import pyodbc as p
 import re #RegEx library
 
