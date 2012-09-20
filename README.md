@@ -3,6 +3,11 @@ Proj.net---pyODBC
 
 A small code example, for connecting to a database through the ODBC driver with the language Python. In this example, I've used Mac OS 10.6.8
 
+1. Basicly what you want to do, is download the ODBC Driver (from MySQL) & the source of pyODBC
+2. Compile the pyODBC connecter (enabling Python to communicate with the ODBC driver).
+3. Install the ODBC driver (according to your host OS). This enables you to talk with a SQL server directly.
+4. Test code.
+
 Assumptions:
 * Installed and working SQL database, with a functional connection. 
 * Python 2.6 installed with working interpreter.
