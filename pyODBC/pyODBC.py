@@ -1,7 +1,7 @@
 '''
 Created on Sep 3, 2012
 
-@author: drlund
+@author: ealkl
 '''
 import pyodbc
 
@@ -14,7 +14,7 @@ pwd = 'testacc'
 
 # cnxn = pyodbc.connect('DSN=spnetwork51')
 
-cnxn = pyodbc.connect('DRIVER={MySQL ODBC 5.1 Driver};SERVER=192.168.8.130;DATABASE=exam2;UID=testacc;PWD=testacc')
+cnxn = pyodbc.connect('DRIVER={MySQL ODBC 5.1 Driver};SERVER=' + server + ';DATABASE=' + database + ';UID=' + uid + ';PWD=' + pwd)
 
 cursor = cnxn.cursor()
                      
