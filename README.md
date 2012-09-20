@@ -4,7 +4,10 @@ Proj.net---pyODBC
 A small code example, for connecting to a database through the ODBC driver with the language Python. In this example, I've used Mac OS 10.6.8
 
 Assumptions:
-Installed and working SQL database, with functional connection. 
+* Installed and working SQL database, with a functional connection. 
+* Python 2.6 installed with working interpreter.
+* Knowledge of ODBC, and how it's setup on your specific OS.
+* Eclipse or another IDE, to debug/test my code. However you can also run the script from within a terminal, by calling interpreter binary & path_to_script. Like so: "python /opt/bin/pyODBC.py".
    
    
 Requirements:
@@ -16,8 +19,10 @@ Requirements:
    
 General notes   
 =============   
-If you are experincing these issues with the ODBC driver, i.e.:   
+
+* To install the Python ODBC module, navigate to the root directory of the source. Then type in to compile and install the .ogg extension: "Python setup.py build install" from the terminal.
    
+If you are experincing these issues with the ODBC driver, i.e.:   
 * pyodbc.Error: ('00000', '[00000] [iODBC][Driver Manager]dlopen({MySQL ODBC 5.1 Driver}, 6): image not found (0) (SQLDriverConnect)')   
    
 This means, that the driver is not where is should be (file reference is incorrect, or non-existent).
