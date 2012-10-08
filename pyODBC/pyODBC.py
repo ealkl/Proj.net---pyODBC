@@ -5,9 +5,9 @@ Created on Sep 3, 2012
 '''
 import pyodbc
 
-server = '192.168.8.130'
-database = 'exam2'
-table = 'table5'
+server = '192.168.227.128'
+database = 'cd_inventory'
+table = 'artists'
 uid = 'testacc'
 pwd = 'testacc'
 
@@ -18,6 +18,6 @@ cnxn = pyodbc.connect('DRIVER={MySQL ODBC 5.1 Driver};SERVER=' + server + ';DATA
 
 cursor = cnxn.cursor()
                      
-cursor.execute('select * from table5')
+cursor.execute('select * from artists')
 for row in cursor.fetchall():
     print row
